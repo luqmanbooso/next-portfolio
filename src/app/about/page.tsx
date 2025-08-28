@@ -61,7 +61,7 @@ export default function About() {
           {/* Left: Image block - smaller width, full height, cornered to left */}
           <div className="relative w-1/3 h-full overflow-hidden z-1">
             <Image
-              src="/cv.jpg"
+              src="/about.jpg"
               alt="Luqman Booso"
               fill
               className="object-cover w-full h-full"
@@ -103,7 +103,7 @@ export default function About() {
               >
                 <div className="bg-primary/10 text-primary px-4 py-3 rounded-xl font-mono text-sm border border-primary/30 backdrop-blur-sm">
                   <div className="font-bold text-lg">3.9+</div>
-                  <div className="text-xs opacity-80">GPA (Dean's List)</div>
+                  <div className="text-xs opacity-80">GPA (Dean&apos;s List)</div>
                 </div>
                 <div className="bg-secondary/10 text-secondary px-4 py-3 rounded-xl font-mono text-sm border border-secondary/30 backdrop-blur-sm">
                   <div className="font-bold text-lg">6+</div>
@@ -111,7 +111,7 @@ export default function About() {
                 </div>
                 <div className="bg-green-500/10 text-green-500 px-4 py-3 rounded-xl font-mono text-sm border border-green-500/30 backdrop-blur-sm">
                   <div className="font-bold text-lg">7+</div>
-                  <div className="text-xs opacity-80">Certifications</div>Syndrome. Mcdonald's. 
+                  <div className="text-xs opacity-80">Certifications</div>
                 </div>
               </motion.div>
 

@@ -48,7 +48,7 @@ export default function Contact() {
 
       if (response.ok) {
         toast.dismiss(loadingToastId);
-        toast.success("Message sent successfully! I'll get back to you soon.", {
+        toast.success("Message sent successfully! I&apos;ll get back to you soon.", {
           description: "Thanks for reaching out! Your message has been delivered.",
           duration: 5000,
         });
@@ -94,7 +94,7 @@ export default function Contact() {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
             Have a project in mind? Want to collaborate? Or just want to say hello? 
-            I'd love to hear from you! Drop me a message and I'll get back to you as soon as possible.
+            I&apos;d love to hear from you! Drop me a message and I&apos;ll get back to you as soon as possible.
           </p>
         </motion.div>
 
@@ -118,7 +118,7 @@ export default function Contact() {
               </div>
               
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Fill out the form below and I'll get back to you within 24 hours. All fields are required.
+                Fill out the form below and I&apos;ll get back to you within 24 hours. All fields are required.
               </p>
               
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

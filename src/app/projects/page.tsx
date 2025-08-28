@@ -30,6 +30,7 @@ export default function Projects() {
       description: "Built a MERN stack LMS for online course management and student engagement, featuring AI essay scoring and certificate generation.",
       image: "/educarity.png", // You'll need to add these images
       category: "Full-Stack",
+      githubUrl: "https://github.com/luqmanbooso/educharity",
       features: ["AI Essay Scoring", "Certificate Generation", "Course Management", "Student Dashboard"]
     },
     {
@@ -40,6 +41,8 @@ export default function Projects() {
       description: "Built a full-stack wellness app for mood logging, habit tracking, and personalized insights with AI support and gamification.",
       image: "/moodx.png",
       category: "Full-Stack",
+      githubUrl: "https://github.com/luqmanbooso/mood-tracker",
+      liveUrl: "https://mood-tracker-demo.vercel.app",
       features: ["Mood Analytics", "Habit Tracking", "AI Insights", "Gamification"]
     },
     {
@@ -60,6 +63,8 @@ export default function Projects() {
       description: "Built a MERN stack web app for contractor bidding & inventory tracking using dynamic dashboards; deployed via Vercel.",
       image: "/buildmart.png",
       category: "Full-Stack",
+      githubUrl: "https://github.com/luqmanbooso/buildmart",
+      liveUrl: "https://buildmart.vercel.app",
       features: ["Contractor Bidding", "Inventory Tracking", "Dynamic Dashboards", "Real-time Updates"]
     },
     {
@@ -117,16 +122,16 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
             <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
-              whileTap={{ scale: 0.95, transition: { duration: 0.05 } }}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-150 backdrop-blur-sm border ${
+              whileHover={{ scale: 1.02, transition: { duration: 0.05 } }}
+              whileTap={{ scale: 0.98, transition: { duration: 0.03 } }}
+              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-100 backdrop-blur-sm border ${
                 selectedCategory === category
                   ? "bg-primary text-primary-foreground border-primary shadow-lg"
                   : "bg-white/10 dark:bg-black/20 text-foreground border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-black/30"
@@ -147,13 +152,13 @@ export default function Projects() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.2, delay: index * 0.03 }}
-                whileHover={{ y: -10, scale: 1.02, transition: { duration: 0.15 } }}
+                transition={{ duration: 0.15, delay: index * 0.02 }}
+                whileHover={{ y: -5, scale: 1.01, transition: { duration: 0.1 } }}
                 onHoverStart={() => setHoveredProject(project.id)}
                 onHoverEnd={() => setHoveredProject(null)}
                 className="group relative"
               >
-                <div className="relative bg-white/10 dark:bg-black/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-200">
+                <div className="relative bg-white/10 dark:bg-black/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-150">
                   
                   {/* Project Image */}
                   <div className="relative h-48 overflow-hidden">
@@ -161,7 +166,7 @@ export default function Projects() {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover transition-transform duration-200 group-hover:scale-110"
+                      className="object-cover transition-transform duration-150 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     
@@ -175,7 +180,7 @@ export default function Projects() {
 
                   {/* Project Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-150">
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-100">
                       {project.title}
                     </h3>
                     <p className="text-secondary font-semibold text-sm mb-3">
@@ -210,7 +215,7 @@ export default function Projects() {
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.15 }}
+                          transition={{ duration: 0.1 }}
                           className="mb-4 overflow-hidden"
                         >
                           <h4 className="text-sm font-semibold text-foreground mb-2">Key Features:</h4>
@@ -228,20 +233,37 @@ export default function Projects() {
 
                     {/* Action Buttons */}
                     <div className="flex gap-3">
-                      <motion.button
-                        whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
-                        whileTap={{ scale: 0.95, transition: { duration: 0.05 } }}
-                        className="flex-1 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-150 hover:bg-primary/90"
-                      >
-                        🔗 View Details
-                      </motion.button>
-                      <motion.button
-                        whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
-                        whileTap={{ scale: 0.95, transition: { duration: 0.05 } }}
-                        className="bg-secondary/20 text-foreground border border-secondary/50 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-150 hover:bg-secondary/30"
-                      >
-                        📋 GitHub
-                      </motion.button>
+                      {project.liveUrl && (
+                        <motion.a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.02, transition: { duration: 0.05 } }}
+                          whileTap={{ scale: 0.98, transition: { duration: 0.03 } }}
+                          className="flex-1 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-100 hover:bg-primary/90 text-center"
+                        >
+                          🔗 Live Demo
+                        </motion.a>
+                      )}
+                      {project.githubUrl && (
+                        <motion.a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.02, transition: { duration: 0.05 } }}
+                          whileTap={{ scale: 0.98, transition: { duration: 0.03 } }}
+                          className={`bg-secondary/20 text-foreground border border-secondary/50 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-100 hover:bg-secondary/30 text-center ${
+                            project.liveUrl ? 'flex-1' : 'w-full'
+                          }`}
+                        >
+                          📋 GitHub
+                        </motion.a>
+                      )}
+                      {!project.liveUrl && !project.githubUrl && (
+                        <div className="w-full bg-muted/10 text-muted-foreground px-4 py-2 rounded-lg text-sm text-center border border-muted/20">
+                          🔒 Private Project
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -264,7 +286,7 @@ export default function Projects() {
                 Interested in working together?
               </h3>
               <p className="text-muted-foreground mb-6">
-                Let's collaborate on your next project and bring your ideas to life!
+                Let&apos;s collaborate on your next project and bring your ideas to life!
               </p>
               <motion.a
                 href="#contact"
@@ -272,7 +294,7 @@ export default function Projects() {
                 whileTap={{ scale: 0.95 }}
                 className="inline-block bg-gradient-to-r from-primary to-secondary text-primary-foreground px-8 py-4 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300"
               >
-                🚀 Let's Connect
+                🚀 Let&apos;s Connect
               </motion.a>
             </div>
           </div>

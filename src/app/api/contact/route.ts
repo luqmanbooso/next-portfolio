@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -34,8 +35,6 @@ export async function POST(request: NextRequest) {
     // Try to send email if environment variables are configured
     if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
       try {
-        const nodemailer = require('nodemailer');
-
         const transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
