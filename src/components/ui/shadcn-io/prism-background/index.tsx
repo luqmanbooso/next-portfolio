@@ -1,9 +1,13 @@
 'use client';
 
 import React, { useEffect, useRef, forwardRef } from "react";
-// @ts-ignore
 import { Renderer, Triangle, Program, Mesh } from "ogl";
 import { cn } from '@/lib/utils';
+
+// Type for DOM element with prism data
+interface ContainerWithPrism extends HTMLDivElement {
+  __prismIO?: IntersectionObserver;
+}
 
 export interface PrismBackgroundProps extends React.HTMLAttributes<HTMLDivElement> {
   height?: number;
@@ -434,7 +438,7 @@ export const PrismBackground = forwardRef<HTMLDivElement, PrismBackgroundProps>(
       });
       io.observe(container);
       startRAF();
-      (container as any).__prismIO = io;
+      (container as ContainerWithPrism).__prismIO = io;
     } else {
       startRAF();
     }
@@ -452,11 +456,9 @@ export const PrismBackground = forwardRef<HTMLDivElement, PrismBackgroundProps>(
         window.removeEventListener("blur", onBlur);
       }
       if (suspendWhenOffscreen) {
-        const io = (container as any).__prismIO as
-          | IntersectionObserver
-          | undefined;
+        const io = (container as ContainerWithPrism).__prismIO;
         if (io) io.disconnect();
-        delete (container as any).__prismIO;
+        delete (container as ContainerWithPrism).__prismIO;
       }
       if (gl.canvas.parentElement === container)
         container.removeChild(gl.canvas);

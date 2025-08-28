@@ -25,7 +25,7 @@ export default function SkillsCarousel({ skills = [] }: SkillsCarouselProps) {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [skills?.length]);
+  }, [skills, skills?.length]);
 
   // Safety check - return null if no skills
   if (!skills || skills.length === 0) {

@@ -1,11 +1,10 @@
 "use client"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import Typewriter from "typewriter-effect"
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-[90vh]  overflow-hidden bg-background">
+    <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden bg-background">
       
       {/* Enhanced animated background */}
       <div className="absolute inset-0 overflow-hidden">
