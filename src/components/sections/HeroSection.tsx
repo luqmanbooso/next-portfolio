@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect"
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-background">
+    <section className="relative w-full min-h-[90vh]  overflow-hidden bg-background">
       
       {/* Enhanced animated background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -68,7 +68,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 py-12 max-w-7xl mx-auto min-h-[80vh]">
         
         {/* Content Section */}
-        <div className="lg:w-[55%] text-center lg:text-left order-2 lg:order-1">
+        <div className="lg:w-[55%] lg:text-left order-2 lg:order-1">
           
           {/* Greeting Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 dark:bg-blue-600/20 backdrop-blur-sm border border-blue-300/30 dark:border-blue-500/30 rounded-full mb-4 text-blue-700 dark:text-blue-300">
@@ -87,7 +87,7 @@ export default function HeroSection() {
 
           {/* Typewriter Effect */}
           <div className="mb-6">
-            <div className="text-lg md:text-xl lg:text-2xl font-semibold text-blue-600 dark:text-blue-400 min-h-[2rem] flex items-center justify-center lg:justify-start">
+            <div className="text-lg md:text-xl lg:text-2xl font-semibold text-blue-600 dark:text-blue-400 min-h-[2rem] flex items-center lg:justify-start">
               <Typewriter
                 options={{
                   strings: [
@@ -106,7 +106,7 @@ export default function HeroSection() {
           </div>
 
           {/* Description */}
-          <div className="text-muted-foreground mb-6 max-w-lg mx-auto lg:mx-0">
+          <div className="text-muted-foreground mb-6 max-w-lg lg:mx-0">
             <p className="text-base lg:text-lg leading-relaxed">
               Passionate about creating innovative digital solutions that make a real impact. 
               Currently pursuing my IT degree at SLIIT while building meaningful projects.
@@ -114,7 +114,7 @@ export default function HeroSection() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+          <div className="flex flex-col sm:flex-row gap-3 lg:justify-start">
             <a
               href="#projects"
               className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-colors duration-200 shadow-lg text-sm lg:text-base"
@@ -133,17 +133,38 @@ export default function HeroSection() {
 
         {/* Image Section */}
         <div className="lg:w-[40%] flex justify-center lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0">
-          <div className="relative">
-            {/* Animated glow behind image */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 dark:from-blue-400/20 dark:to-purple-400/20 rounded-2xl blur-2xl animate-pulse"></div>
-            <Image
-              src="/cv.jpg"
-              alt="Luqman Booso"
-              width={350}
-              height={350}
-              className="relative z-10 w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-2xl border-2 border-blue-200/50 dark:border-blue-700/50 shadow-2xl"
-              priority
-            />
+          <div className="relative group">
+            {/* Multiple glow layers */}
+            <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/20 to-purple-500/20 dark:from-blue-400/15 dark:to-purple-400/15 rounded-3xl blur-3xl animate-pulse group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-700"></div>
+            <div className="absolute -inset-2 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 dark:from-cyan-400/20 dark:to-blue-500/20 rounded-2xl blur-xl animate-pulse delay-500 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-700"></div>
+            
+            {/* Decorative frame */}
+            <div className="absolute -inset-1 bg-gradient-to-br from-blue-200/80 via-purple-200/60 to-cyan-200/80 dark:from-blue-600/40 dark:via-purple-600/30 dark:to-cyan-600/40 rounded-2xl p-[2px]">
+              <div className="w-full h-full bg-background/80 backdrop-blur-sm rounded-2xl"></div>
+            </div>
+            
+            {/* Main image container */}
+            <div className="relative bg-gradient-to-br from-white/90 to-blue-50/90 dark:from-slate-800/90 dark:to-slate-900/90 backdrop-blur-sm rounded-2xl p-2 shadow-2xl border border-white/50 dark:border-slate-600/50">
+              <Image
+                src="/cv.jpg"
+                alt="Luqman Booso"
+                width={350}
+                height={350}
+                className="relative z-10 w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]"
+                priority
+              />
+              
+              {/* Corner accents */}
+              <div className="absolute top-1 left-1 w-6 h-6 border-l-2 border-t-2 border-blue-500/60 dark:border-blue-400/60 rounded-tl-xl"></div>
+              <div className="absolute top-1 right-1 w-6 h-6 border-r-2 border-t-2 border-blue-500/60 dark:border-blue-400/60 rounded-tr-xl"></div>
+              <div className="absolute bottom-1 left-1 w-6 h-6 border-l-2 border-b-2 border-blue-500/60 dark:border-blue-400/60 rounded-bl-xl"></div>
+              <div className="absolute bottom-1 right-1 w-6 h-6 border-r-2 border-b-2 border-blue-500/60 dark:border-blue-400/60 rounded-br-xl"></div>
+            </div>
+            
+            {/* Floating elements */}
+            <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full shadow-lg animate-bounce delay-1000"></div>
+            <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full shadow-lg animate-bounce delay-2000"></div>
+            <div className="absolute top-1/4 -right-4 w-2 h-2 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full shadow-lg animate-pulse delay-500"></div>
           </div>
         </div>
       </div>
