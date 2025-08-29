@@ -30,7 +30,8 @@ export default function Projects() {
       description: "Built a MERN stack LMS for online course management and student engagement, featuring AI essay scoring and certificate generation.",
       image: "/educarity.png", // You'll need to add these images
       category: "Full-Stack",
-      githubUrl: "https://github.com/luqmanbooso/educharity",
+      liveUrl:"https://eduedu-dh5w.vercel.app/",
+      githubUrl: "https://github.com/luqmanbooso/eduedu",
       features: ["AI Essay Scoring", "Certificate Generation", "Course Management", "Student Dashboard"]
     },
     {
@@ -41,7 +42,7 @@ export default function Projects() {
       description: "Built a full-stack wellness app for mood logging, habit tracking, and personalized insights with AI support and gamification.",
       image: "/moodx.png",
       category: "Full-Stack",
-      githubUrl: "https://github.com/luqmanbooso/mood-tracker",
+      githubUrl: "https://github.com/luqmanbooso/MoodTracker",
       liveUrl: "https://mood-tracker-demo.vercel.app",
       features: ["Mood Analytics", "Habit Tracking", "AI Insights", "Gamification"]
     },
@@ -53,6 +54,7 @@ export default function Projects() {
       description: "Developed a Kotlin-based Android app to track expenses with Firebase backup, budget alerts & visual spending reports.",
       image: "/spendly.jpeg",
       category: "Mobile",
+      githubUrl: "https://github.com/luqmanbooso/Spendly",
       features: ["Expense Tracking", "Budget Alerts", "Visual Reports", "Firebase Sync"]
     },
     {
@@ -63,8 +65,8 @@ export default function Projects() {
       description: "Built a MERN stack web app for contractor bidding & inventory tracking using dynamic dashboards; deployed via Vercel.",
       image: "/buildmart.png",
       category: "Full-Stack",
-      githubUrl: "https://github.com/luqmanbooso/buildmart",
-      liveUrl: "https://buildmart.vercel.app",
+      githubUrl: "https://github.com/luqmanbooso/BuildMart",
+      liveUrl: "https://buildmart-system.vercel.app/",
       features: ["Contractor Bidding", "Inventory Tracking", "Dynamic Dashboards", "Real-time Updates"]
     },
     {
@@ -75,6 +77,7 @@ export default function Projects() {
       description: "Created a Java & SQL backend for managing bookings and room inventory with a responsive Bootstrap UI.",
       image: "/Boutique.png",
       category: "Backend",
+      githubUrl: "https://github.com/luqmanbooso/Boutique",
       features: ["Booking Management", "Room Inventory", "Responsive UI", "SQL Database"]
     },
     {
@@ -84,6 +87,7 @@ export default function Projects() {
       technologies: ["PHP", "HTML/CSS", "JavaScript", "MySQL"],
       description: "Built a PHP-MySQL system for listing and booking apartments; streamlined user & admin workflows with JS-enhanced UI.",
       image: "/urbannestle.webp",
+      githubUrl: "https://github.com/luqmanbooso/Urban-nestle",
       category: "Web Development",
       features: ["Apartment Listings", "Booking System", "Admin Dashboard", "User Management"]
     }

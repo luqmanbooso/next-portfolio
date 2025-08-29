@@ -9,16 +9,16 @@ export default function HeroSection() {
       {/* Enhanced animated background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Dynamic gradient mesh */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-950/95 dark:via-blue-950/80 dark:to-slate-950/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-blue-50/60 to-purple-50/40 dark:from-black/20 dark:via-blue-950/40 dark:to-purple-950/30"></div>
         
         {/* Large animated orbs with better positioning */}
-        <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-br from-blue-200/40 to-blue-300/50 dark:from-blue-700/15 dark:to-blue-800/20 rounded-full blur-3xl animate-float-slow"></div>
-        <div className="absolute top-1/2 -right-20 w-[400px] h-[400px] bg-gradient-to-br from-purple-200/40 to-blue-200/50 dark:from-purple-700/15 dark:to-blue-700/20 rounded-full blur-3xl animate-float-slow delay-1000"></div>
-        <div className="absolute -bottom-20 left-1/3 w-[350px] h-[350px] bg-gradient-to-br from-cyan-200/40 to-blue-100/50 dark:from-blue-800/15 dark:to-cyan-700/20 rounded-full blur-3xl animate-float-slow delay-2000"></div>
+        <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-br from-white/20 to-blue-100/30 dark:from-black/30 dark:to-blue-900/20 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute top-1/2 -right-20 w-[400px] h-[400px] bg-gradient-to-br from-white/15 to-purple-100/25 dark:from-black/25 dark:to-purple-900/15 rounded-full blur-3xl animate-float-slow delay-1000"></div>
+        <div className="absolute -bottom-20 left-1/3 w-[350px] h-[350px] bg-gradient-to-br from-white/20 to-cyan-100/30 dark:from-black/30 dark:to-cyan-900/20 rounded-full blur-3xl animate-float-slow delay-2000"></div>
         
         {/* Medium sized moving orbs */}
-        <div className="absolute top-1/4 left-1/2 w-64 h-64 bg-gradient-to-br from-blue-100/30 to-purple-100/40 dark:from-blue-700/10 dark:to-purple-800/15 rounded-full blur-2xl animate-orbit"></div>
-        <div className="absolute top-3/4 left-1/4 w-48 h-48 bg-gradient-to-br from-indigo-100/30 to-blue-200/40 dark:from-indigo-800/10 dark:to-blue-900/15 rounded-full blur-2xl animate-orbit-reverse"></div>
+        <div className="absolute top-1/4 left-1/2 w-64 h-64 bg-gradient-to-br from-white/15 to-blue-200/25 dark:from-black/25 dark:to-blue-800/15 rounded-full blur-2xl animate-orbit"></div>
+        <div className="absolute top-3/4 left-1/4 w-48 h-48 bg-gradient-to-br from-white/10 to-indigo-200/20 dark:from-black/20 dark:to-indigo-800/10 rounded-full blur-2xl animate-orbit-reverse"></div>
         
         {/* Floating particles with varied sizes */}
         <div className="absolute inset-0">
@@ -41,7 +41,7 @@ export default function HeroSection() {
           ].map((particle, i) => (
             <div
               key={i}
-              className="absolute bg-slate-400/30 dark:bg-slate-300/20 rounded-full animate-float"
+              className="absolute bg-white/20 dark:bg-black/30 rounded-full animate-float"
               style={{
                 width: `${particle.size}px`,
                 height: `${particle.size}px`,
@@ -55,13 +55,13 @@ export default function HeroSection() {
         </div>
         
         {/* Subtle geometric patterns */}
-        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.06]">
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.08]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--foreground)/0.1)_0%,transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_49%,hsl(var(--foreground)/0.05)_50%,transparent_51%)] bg-[size:60px_60px]"></div>
         </div>
         
         {/* Gradient overlay for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-background/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/40"></div>
       </div>
       
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 py-12 max-w-7xl mx-auto min-h-[80vh]">
@@ -134,16 +134,16 @@ export default function HeroSection() {
         <div className="lg:w-[40%] flex justify-center lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0">
           <div className="relative group">
             {/* Multiple glow layers */}
-            <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/20 to-purple-500/20 dark:from-blue-400/15 dark:to-purple-400/15 rounded-3xl blur-3xl animate-pulse group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-700"></div>
-            <div className="absolute -inset-2 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 dark:from-cyan-400/20 dark:to-blue-500/20 rounded-2xl blur-xl animate-pulse delay-500 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-700"></div>
+            <div className="absolute -inset-4 bg-gradient-to-br from-white/20 to-blue-100/20 dark:from-black/15 dark:to-blue-900/15 rounded-3xl blur-3xl animate-pulse group-hover:from-white/30 group-hover:to-blue-100/30 dark:group-hover:from-black/25 dark:group-hover:to-blue-900/25 transition-all duration-700"></div>
+            <div className="absolute -inset-2 bg-gradient-to-br from-white/30 to-cyan-100/30 dark:from-black/20 dark:to-cyan-900/20 rounded-2xl blur-xl animate-pulse delay-500 group-hover:from-white/40 group-hover:to-cyan-100/40 dark:group-hover:from-black/30 dark:group-hover:to-cyan-900/30 transition-all duration-700"></div>
             
             {/* Decorative frame */}
-            <div className="absolute -inset-1 bg-gradient-to-br from-blue-200/80 via-purple-200/60 to-cyan-200/80 dark:from-blue-600/40 dark:via-purple-600/30 dark:to-cyan-600/40 rounded-2xl p-[2px]">
+            <div className="absolute -inset-1 bg-gradient-to-br from-white/80 via-blue-100/60 to-purple-100/80 dark:from-black/40 dark:via-blue-900/30 dark:to-purple-900/40 rounded-2xl p-[2px]">
               <div className="w-full h-full bg-background/80 backdrop-blur-sm rounded-2xl"></div>
             </div>
             
             {/* Main image container */}
-            <div className="relative bg-gradient-to-br from-white/90 to-blue-50/90 dark:from-slate-800/90 dark:to-slate-900/90 backdrop-blur-sm rounded-2xl p-2 shadow-2xl border border-white/50 dark:border-slate-600/50">
+            <div className="relative bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-2xl p-2 shadow-2xl border border-white/20 dark:border-white/10">
               <Image
                 src="/cv.jpg"
                 alt="Luqman Booso"
@@ -154,10 +154,10 @@ export default function HeroSection() {
               />
               
               {/* Corner accents */}
-              <div className="absolute top-1 left-1 w-6 h-6 border-l-2 border-t-2 border-blue-500/60 dark:border-blue-400/60 rounded-tl-xl"></div>
-              <div className="absolute top-1 right-1 w-6 h-6 border-r-2 border-t-2 border-blue-500/60 dark:border-blue-400/60 rounded-tr-xl"></div>
-              <div className="absolute bottom-1 left-1 w-6 h-6 border-l-2 border-b-2 border-blue-500/60 dark:border-blue-400/60 rounded-bl-xl"></div>
-              <div className="absolute bottom-1 right-1 w-6 h-6 border-r-2 border-b-2 border-blue-500/60 dark:border-blue-400/60 rounded-br-xl"></div>
+              <div className="absolute top-1 left-1 w-6 h-6 border-l-2 border-t-2 border-foreground/60 dark:border-foreground/60 rounded-tl-xl"></div>
+              <div className="absolute top-1 right-1 w-6 h-6 border-r-2 border-t-2 border-foreground/60 dark:border-foreground/60 rounded-tr-xl"></div>
+              <div className="absolute bottom-1 left-1 w-6 h-6 border-l-2 border-b-2 border-foreground/60 dark:border-foreground/60 rounded-bl-xl"></div>
+              <div className="absolute bottom-1 right-1 w-6 h-6 border-r-2 border-b-2 border-foreground/60 dark:border-foreground/60 rounded-br-xl"></div>
             </div>
             
             {/* Floating elements */}
