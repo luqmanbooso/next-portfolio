@@ -145,7 +145,7 @@ export default function HeroSection() {
             {/* Main image container */}
             <div className="relative bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-2xl p-2 shadow-2xl border border-white/20 dark:border-white/10">
               <Image
-                src="/cv.jpg"
+                src="/cv.png"
                 alt="Luqman Booso"
                 width={350}
                 height={350}
